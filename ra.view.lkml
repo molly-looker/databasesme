@@ -18,13 +18,19 @@ view: ra {
 
   dimension: state {
     type: string
-    sql: ${TABLE}.state ;;
+    sql: select ${TABLE}.state where ${TABLE}.state="California";;
   }
 
   dimension: urbanpop {
     type: number
     sql: ${TABLE}.urbanpop ;;
   }
+
+  dimension: fakecount {
+    type:  number
+    sql:  '1/0' ;;
+  }
+
 
   measure: count {
     type: count
