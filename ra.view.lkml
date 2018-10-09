@@ -18,8 +18,14 @@ view: ra {
 
   dimension: state {
     type: string
-    sql: select ${TABLE}.state where ${TABLE}.state="California";;
+    sql:  ${TABLE}.state ;;
   }
+
+
+  dimension: id2 {
+    type: yesno
+    sql:  ${TABLE}.murder=10;;
+    }
 
   dimension: urbanpop {
     type: number
@@ -29,6 +35,13 @@ view: ra {
   dimension: fakecount {
     type:  number
     sql:  '1/0' ;;
+  }
+
+  dimension: case {
+    type:  string
+    sql:  case when (${TABLE}.state='') then 'Cali2'
+    when ${TABLE}.state='OR' then 'Oregon2'
+    else 'NOT SPECIFIED2' end;;
   }
 
 

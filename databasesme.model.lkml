@@ -1,10 +1,10 @@
-connection: "mollysdb"
+ connection: "mollysdb"
 
 # include all the views
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+#include: "*.dashboard"
 
 datagroup: databasesme_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -13,4 +13,10 @@ datagroup: databasesme_default_datagroup {
 
 persist_with: databasesme_default_datagroup
 
-explore: ra {}
+explore: ra {
+  join: rapdt {
+    type:  inner
+    sql_on:  ${ra.assault}=${rapdt.assault};;
+    relationship: one_to_one
+  }
+}
