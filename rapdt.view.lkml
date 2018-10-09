@@ -6,7 +6,8 @@ view: rapdt {
           FROM public.ra
           -- where {% condition filter %} ra.id2 {% endcondition %}
           order by murder;;
-      sql_trigger_value: SELECT MINUTE(CURTIME()) ;;
+   persist_for: "2 minutes"
+
   indexes: ["murder"]
     }
 
