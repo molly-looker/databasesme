@@ -6,7 +6,7 @@ view: rapdt {
           FROM public.ra
           -- where {% condition filter %} ra.id2 {% endcondition %}
           order by murder;;
-   persist_for: "2 minutes"
+   persist_for: "8 minutes"
 
   indexes: ["murder"]
     }
