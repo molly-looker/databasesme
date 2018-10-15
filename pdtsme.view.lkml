@@ -6,7 +6,7 @@ view: pdtsme {
           FROM public.ra
           -- where {% condition filter %} ra.id2 {% endcondition %}
           order by murder;;
-    persist_for: "8 minutes"
+    sql_trigger_value: SELECT DATE_PART('hour', NOW()) ;;
 
     indexes: ["murder"]
   }
