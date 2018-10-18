@@ -19,6 +19,7 @@ view: pdtsme {
   }
 
   dimension: assault {
+    label: "AHHHH"
     type: number
     sql: ${TABLE}.assault ;;
   }

@@ -7,6 +7,7 @@ view: ra {
   }
 
   dimension: murder {
+    #label: "AHHH"
     type: number
     sql: ${TABLE}.murder ;;
   }
@@ -14,6 +15,10 @@ view: ra {
   dimension: rape {
     type: number
     sql: ${TABLE}.rape ;;
+    link: {
+      label: "New Subscriber Dashboard"
+      url: "/dashboards/11?Region={{ _filters['ra.murder'] | url_encode }}"
+    }
   }
 
   dimension: state {
