@@ -4,7 +4,6 @@ view: pdtsme {
     sql:SELECT
            murder, assault
           FROM public.ra
-          -- where {% condition filter %} ra.id2 {% endcondition %}
           order by murder;;
     sql_trigger_value: SELECT DATE_PART('hour', NOW()) ;;
 
