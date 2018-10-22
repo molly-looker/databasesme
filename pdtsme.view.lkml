@@ -10,7 +10,10 @@ view: pdtsme {
     indexes: ["murder"]
   }
 
-
+  dimension: test {
+    type: string
+    sql:  "A" ;;
+  }
 
   dimension: filter {
     type: yesno
