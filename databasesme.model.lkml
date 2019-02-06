@@ -4,7 +4,7 @@
 include: "*.view"
 
 # include all the dashboards
-#include: "*.dashboard"
+include: "performancedash.dashboard"
 
 datagroup: databasesme_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -14,9 +14,8 @@ datagroup: databasesme_default_datagroup {
 persist_with: databasesme_default_datagroup
 
 explore: ra {
-  join: rapdt {
-    type:  inner
-    sql_on:  ${ra.assault}=${rapdt.assault};;
-    relationship: one_to_one
+#   join: rapdt {
+#     type:  inner
+#     sql_on:  ${ra.thisisalsoareallylongmeasurename}=${rapdt.assault};;
+#     relationship: one_to_one
   }
-}
