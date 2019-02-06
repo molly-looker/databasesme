@@ -4,7 +4,12 @@ view: rapdt {
     sql:SELECT
            murder, assault
           FROM public.ra
-          order by murder;;
+
+
+          UNION
+
+          SELECT 2 as murder,4 as assault
+          FROM public.ra;;
    persist_for: "8 minutes"
 
   indexes: ["murder"]
